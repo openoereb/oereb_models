@@ -74,6 +74,12 @@
       <xsd:maxInclusive value="9999"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="Index">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="-1000"/>
+      <xsd:maxInclusive value="1000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType name="Lawstatus">
     <xsd:sequence>
       <xsd:element name="Code" type="LawstatusCode"> </xsd:element>
@@ -106,6 +112,7 @@
       <xsd:element name="Code" type="ThemeCode"> </xsd:element>
       <xsd:element name="SubCode" type="ThemeCode" minOccurs="0"> </xsd:element>
       <xsd:element name="Text" type="MultilingualText"> </xsd:element>
+      <xsd:element name="DataExtractIndex" type="Index"> </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:simpleType name="ThemeCode">
@@ -309,14 +316,7 @@
       <xsd:element name="OtherLegend" type="LegendEntry" minOccurs="0" maxOccurs="unbounded"> </xsd:element>
       <xsd:element name="min_NS95" type="geo:CoordType"/>
       <xsd:element name="max_NS95" type="geo:CoordType"/>
-      <xsd:element name="layerIndex">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:integer">
-            <xsd:minInclusive value="-1000"/>
-            <xsd:maxInclusive value="1000"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
+      <xsd:element name="layerIndex" type="Index"/>
       <xsd:element name="layerOpacity">
         <xsd:simpleType>
           <xsd:restriction base="xsd:double">
@@ -346,14 +346,7 @@
       <xsd:element name="TextAtWeb" type="MultilingualUri" minOccurs="0"> </xsd:element>
       <xsd:element name="ArticleNumber" type="ArticleNumber" minOccurs="0" maxOccurs="unbounded"> </xsd:element>
       <xsd:element name="Lawstatus" type="Lawstatus"/>
-      <xsd:element name="Index">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:integer">
-            <xsd:minInclusive value="-1000"/>
-            <xsd:maxInclusive value="1000"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
+      <xsd:element name="Index" type="Index"/>
       <xsd:element name="ResponsibleOffice" type="Office"> </xsd:element>
       <xsd:element ref="extensions" minOccurs="0"/>
     </xsd:sequence>
