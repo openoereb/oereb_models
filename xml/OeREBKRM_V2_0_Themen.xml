@@ -41,7 +41,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-        <AuszugIndex>010</AuszugIndex>
+        <AuszugIndex>20</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
         <Thema REF="3"/>
